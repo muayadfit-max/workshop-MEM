@@ -132,6 +132,12 @@ h1,h2,h3,h4,p,ul,figure{margin:0}
 .list li::before{content:"";position:absolute;left:2px;top:.52em;width:10px;height:10px;border-radius:50%;background:var(--teal)}
 .list.orange li::before{background:var(--orange)}
 .list li b{font-weight:700}
+/* ranked list: one headline item carries the figure, the rest read as secondary */
+.list.ranked li.top{color:var(--ink);font-weight:700}
+.list.ranked li.top b{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:27px;line-height:1;letter-spacing:-0.025em;color:var(--orange);margin-left:5px;vertical-align:-2px;white-space:nowrap}
+.list.ranked li.top::before{width:12px;height:12px;top:.48em;box-shadow:0 0 0 4px rgba(214,116,44,.16)}
+.list.ranked li:not(.top){font-size:20px;color:var(--muted)}
+.list.ranked li:not(.top)::before{width:8px;height:8px;top:.6em;opacity:.42}
 .statrow{display:flex;gap:44px;flex-wrap:wrap}
 .stat .v{font-family:'Cormorant Garamond',serif;font-size:52px;font-style:italic;font-weight:600;color:var(--teal);line-height:.95;letter-spacing:-0.03em;display:block}
 .stat .l{font-size:15px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-top:7px;display:block}
@@ -1545,11 +1551,11 @@ h1,h2,h3,h4,p,ul,figure{margin:0}
           <div class="vdiv"></div>
           <div class="colB">
             <div class="colh">Highest-probability risks</div>
-            <ul class="list orange">
-              <li>Stakeholder engagement · <b>60–70%</b></li>
-              <li>Cost escalation · <b>50–60%</b></li>
-              <li>Transport bottleneck · <b>40–50%</b></li>
-              <li>Investor confidence · <b>40–50%</b></li>
+            <ul class="list orange ranked">
+              <li class="top">Stakeholder engagement · <b>60–70%</b></li>
+              <li>Cost escalation</li>
+              <li>Transport bottleneck</li>
+              <li>Investor confidence</li>
             </ul>
           </div>
         </div>
