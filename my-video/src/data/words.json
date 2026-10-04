@@ -313,5 +313,6 @@
    "lang": "en"
   }
  ],
- "note": "Times in seconds. start = word onset (cut/appear point). end = next word onset when speech is continuous."
+ "note": "Times in seconds. start = word onset (cut/appear point). end = next word onset when speech is continuous. Word times are measured from the first audio sample; the audio track starts at audio_start (0.087 s) on the .mov timeline, so add it for the video timeline.",
+ "audio_start": 0.087
 }
