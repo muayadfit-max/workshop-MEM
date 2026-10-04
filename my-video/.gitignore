@@ -5,3 +5,8 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Source media stays local: the voice-over video shows a face and the cabin,
+# and the reference is third-party footage. Only their derived data is committed.
+public/assets/voiceover.mov
+references/

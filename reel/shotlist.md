@@ -1,38 +1,42 @@
-# Shot list — "Just be careful" (1080x1920, 30 fps, about 22.7 s)
+# Shot list — "Just be careful" (1080x1920, 30 fps, 22.70 s = 681 frames)
 
-The voice-over is 21.08 s long. After the last word, the end card enters and then holds
-1.5 s, as CLAUDE.md requires. That makes the total about 22.7 s, and the last line is
-never cut.
+The audio track of `assets/voiceover.mov` is 20.99 s long. The last spoken word, «careful»,
+starts at 19.79 s. After it, the end card enters and then holds until 22.70 s.
 
-**Times are provisional.** They come from the voice-over's energy envelope. In step 3,
-every cut and every word-in snaps to a real word boundary in `words.json`. Every shot
-must hold ≥ 1.5 s after it settles. Where the transcript breaks that, the cut moves to
-the next word boundary.
+**Snapped to `my-video/src/data/words.json`.** Every cut lands on a real word onset.
 
 **Bold** = emphasis word (140 px / 800). Every other word is 72 px / 500.
 
-| # | Start–end (s) | On-screen text | Framing and focal (40–55% H) | Motion (transform and opacity only, frame-driven) | Transition in |
-|---|---|---|---|---|---|
-| 1 | 0.00–2.40 | نوعية **الناس** | **WIDE poster.** The whole world: cliff on the right, the kneeling figure leaning off the ledge with its hand offered, the accent clock on the ledge, a rigid ladder from below that stops a gap short of the hand, the climber on it. Focal: the climber, about 45% H | Frame 0 is final: the line is visible in `muted`, and each word lights up as it is spoken. Idle loops start. Camera push 1.00→1.03 | — (frame 0 = poster) |
-| 2 | 2.40–4.90 | واقفين **معك** | **MEDIUM** on the top figure and the offered open hand. Focal: the top figure, about 48% H | The hand extends 24 px (ease-out over 18 f), the body leans 2° forward. Push 1.00→1.06 | Hard cut |
-| 3 | 4.90–7.80 | من **وراك** | **MEDIUM, behind the figure.** The camera trucks so the hidden hand comes into view: clenched behind its back. Focal: the top figure, about 50% H | Truck 60 px plus push 1.00→1.04. On «وراك» the fist tightens (a 0.94 scale pulse). The front stays friendly | Hard cut |
-| 4 | 7.80–10.30 | **مدح** ودعم | **MEDIUM-WIDE** on the vertical: the hand on top, the ladder top, the climber reaching. Focal: the climber, about 52% H | The climber climbs one rung (−70 px, ease-out over 24 f). The hand dips 12 px. **The gap never closes** (stays ≥ 90 px) | Hard cut |
-| 5 | 10.30–12.60 | يخربون **علاقاتك** | **TIGHT on the gap**: fingertips above, the top rung below, the climber's head and reaching hand. Focal: the climber's upper body plus the hand, about 50% H | Near-still. Push 1.00→1.05. On «يخربون» the ladder rocks 1.5° around its base and settles | Hard cut |
-| 6 | 12.60–15.20 | يشوهون **صورتك** | **MEDIUM on the climber** alone on the ladder. Focal: the climber, about 54% H | On «يشوهون» the climber's silhouette skews 6° (`skewX`, ease-out over 12 f) and holds bent: the image distorted | Hard cut |
-| 7 | 15.20–22.70 **(ending, longest)** | It keeps **rolling** → Just be **careful** → **MUAYAD FIT** | **CLOSE on the accent clock** (≈42% H), then one continuous pull-back to the **WIDE poster** framing (climber ≈45% H). No cut inside the shot | The clock hand rotates continuously (one turn per 2.6 s, linear from the frame number). On «Just» the camera pulls back 2.2→1.00 (ease-out, 45 f) and the clock keeps rolling, small, on the ledge. 6 f after «careful» ends, the line fades and the scene drops to 0.25 opacity. `MUAYAD FIT` enters (opacity + 18 px rise, 8 f) and holds 1.5 s. The audio plays to its last sample | Hard cut |
+| # | Start–end (s) | Frames | Cut lands on | On-screen text (word-in at spoken onset) | Framing and focal (40–55% H) | Motion (transform and opacity only) |
+|---|---|---|---|---|---|---|
+| 1 | 0.00–2.89 | 0–86 | — | نوعية **الناس** shown in `muted` from frame 0 (poster) | **WIDE poster**: cliff, kneeling figure with the offered hand, accent clock, a ladder from below that stops short of the hand, the climber. Focal: the climber, ≈45% | Idle loops. Camera push 1.00→1.03. The voice says «نشرت هذا الفيديو لأن يوصف بالضبط» |
+| 2 | 2.89–4.73 | 87–141 | «نوعية» | نوعية (accent 2.89) → **الناس** (accent 3.34) | **MEDIUM** on the top figure: "the kind of people". Focal: the top figure, ≈48% | The picture is settled at the cut. Slow push 1.00→1.04. The offered hand bobs |
+| 3 | 4.73–8.78 | 142–262 | «واقفين» | واقفين **معك** (4.73 / 5.17) → line swap → من **وراك** (5.76 / 5.93) | **MEDIUM** on the top figure, front, then the hidden side. Focal ≈50% | On «واقفين» the hand extends 24 px. On «من» the camera trucks 1:1 to the clenched fist behind its back (ease-out, lands 6.30 s). The fist tightens on «وراك» |
+| 4 | 8.78–10.87 | 263–325 | «مدح» | **مدح** ودعم (8.78 / 9.17) | **MEDIUM-WIDE** vertical: hand, ladder top, climber. Focal: the climber, ≈52% | On «مدح» the climber climbs one rung (−70 px, ease-out 15 f). The hand dips 12 px. The gap stays ≥ 90 px. Settled 9.37 s, held 1.50 s |
+| 5 | 10.87–13.85 | 326–415 | «يخرب» | يخربون **علاقاتك** (10.87 / 11.09) | **TIGHT on the gap**: fingertips, top rung, the climber's head and reaching hand. Focal ≈50% | On «يخرب» the ladder rocks 1.5° and settles. On «فرصة» (12.83) it slips 40 px, so the gap widens |
+| 6 | 13.85–17.19 | 416–515 | «عشان» | (no text until 15.10) → يشوهون **صورتك** (15.10 / 15.83) | **MEDIUM on the climber**. Focal ≈54% | On «يطيحون» (14.23) the climber slips half a rung. On «ويشوهون» its silhouette skews 6° (`skewX`, 12 f) and holds bent |
+| 7 | 17.19–22.70 **(ending, longest: 5.51 s)** | 516–680 | «it» | It keeps **rolling** (17.19 / 17.32 / 17.74) → Just be **careful** (19.34 / 19.63 / 19.79) → `MUAYAD FIT` | **CLOSE on the accent clock** (≈42%), then one continuous pull-back to the **WIDE poster** (climber ≈45%) | The clock hand rolls continuously. On «just» the camera pulls back 2.2→1.00 (ease-out, 45 f). At 20.53 s the line fades and the scene drops to 0.25. The wordmark enters at 20.53 s and holds 2.0 s |
+
+Line exits: each line fades out over 5 frames, finishing on the next line's first onset or on
+the cut, whichever comes first. The «my friend» words (18.10–18.67) are not shown on screen.
+
+## Holds after settle (rule: ≥ 1.5 s)
+
+A shot settles when its opening camera move and figure action have landed and its first line
+is on screen. Words that come later are word-synced beats inside the shot.
+
+| Shot | Settles | Next cut | Hold |
+|---|---|---|---|
+| 1 | 0.00 (poster) | 2.89 | 2.89 s |
+| 2 | 2.89 (no entrance move) | 4.73 | 1.84 s |
+| 3 | 4.93 (first line in) | 8.78 | 3.85 s |
+| 4 | 9.37 (ودعم in, climb landed) | 10.87 | 1.50 s |
+| 5 | 11.40 (rock landed) | 13.85 | 2.45 s |
+| 6 | 14.60 (slip landed) | 17.19 | 2.59 s |
+| 7 | 20.80 (wordmark in) | 22.70 | 1.90 s |
 
 ## Sound
 
-- The audio is the voice-over from `assets/voiceover.mov` only. The picture is never shown.
-- **Cut sound (pending your OK):** a soft clock tick starts 3 f before each of the 6 cuts,
-  about −20 dB under the voice. It is synthesised in code because no sound asset was given.
-
-## Checks built into this plan
-
-- **Frame 0** shows the cliff, the ladder, the gap and `نوعية الناس`.
-- No more than 4 words are on screen in any frame. The end card replaces line 8 and is
-  never added to it.
-- The text band is y 200–420 in every shot. Every important element sits between
-  y 420 and 1440, and x 64–1016.
-- The accent is used on the clock and the current word only.
-- Shots 1–6 are each 2.3–2.9 s long. Shot 7 is about 7.5 s and the longest.
+- The voice-over audio plays from frame 0 to its end (20.99 s). The picture is never shown.
+- A clock tick synthesised in code (a short damped sine click, about −20 dB under the voice)
+  plays 3 frames before each cut: frames 84, 139, 260, 323, 413 and 513.

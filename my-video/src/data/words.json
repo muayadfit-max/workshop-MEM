@@ -1,0 +1,317 @@
+{
+ "source": "assets/voiceover.mov",
+ "duration": 20.991,
+ "method": "Whisper large-v3-turbo text (sherpa-onnx) + omnilingual-1B CTC forced alignment, onsets snapped to the preceding energy minimum",
+ "words": [
+  {
+   "i": 0,
+   "word": "نشرت",
+   "start": 0.75,
+   "end": 1.16,
+   "lang": "ar"
+  },
+  {
+   "i": 1,
+   "word": "هذا",
+   "start": 1.16,
+   "end": 1.28,
+   "lang": "ar"
+  },
+  {
+   "i": 2,
+   "word": "الفيديو",
+   "start": 1.28,
+   "end": 1.63,
+   "lang": "ar"
+  },
+  {
+   "i": 3,
+   "word": "لان",
+   "start": 1.63,
+   "end": 2.02,
+   "lang": "ar"
+  },
+  {
+   "i": 4,
+   "word": "يوصف",
+   "start": 2.02,
+   "end": 2.4,
+   "lang": "ar"
+  },
+  {
+   "i": 5,
+   "word": "بالضبط",
+   "start": 2.4,
+   "end": 2.89,
+   "lang": "ar"
+  },
+  {
+   "i": 6,
+   "word": "نوعية",
+   "start": 2.89,
+   "end": 3.34,
+   "lang": "ar"
+  },
+  {
+   "i": 7,
+   "word": "الناس",
+   "start": 3.34,
+   "end": 3.74,
+   "lang": "ar"
+  },
+  {
+   "i": 8,
+   "word": "اللي",
+   "start": 3.74,
+   "end": 3.99,
+   "lang": "ar"
+  },
+  {
+   "i": 9,
+   "word": "يظهرون",
+   "start": 3.99,
+   "end": 4.43,
+   "lang": "ar"
+  },
+  {
+   "i": 10,
+   "word": "انهم",
+   "start": 4.43,
+   "end": 4.73,
+   "lang": "ar"
+  },
+  {
+   "i": 11,
+   "word": "واقفين",
+   "start": 4.73,
+   "end": 5.17,
+   "lang": "ar"
+  },
+  {
+   "i": 12,
+   "word": "معك",
+   "start": 5.17,
+   "end": 5.53,
+   "lang": "ar"
+  },
+  {
+   "i": 13,
+   "word": "وهم",
+   "start": 5.53,
+   "end": 5.76,
+   "lang": "ar"
+  },
+  {
+   "i": 14,
+   "word": "من",
+   "start": 5.76,
+   "end": 5.93,
+   "lang": "ar",
+   "note": "onset moved from 5.85 by clip check: 5.76-6.36 transcribes as «من وراك»"
+  },
+  {
+   "i": 15,
+   "word": "وراك",
+   "start": 5.93,
+   "end": 6.36,
+   "lang": "ar"
+  },
+  {
+   "i": 16,
+   "word": "يزيدون",
+   "start": 6.36,
+   "end": 6.81,
+   "lang": "ar"
+  },
+  {
+   "i": 17,
+   "word": "عليك",
+   "start": 6.81,
+   "end": 6.98,
+   "lang": "ar"
+  },
+  {
+   "i": 18,
+   "word": "المشاكل",
+   "start": 6.98,
+   "end": 7.66,
+   "lang": "ar"
+  },
+  {
+   "i": 19,
+   "word": "قدامك",
+   "start": 8.19,
+   "end": 8.78,
+   "lang": "ar"
+  },
+  {
+   "i": 20,
+   "word": "مدح",
+   "start": 8.78,
+   "end": 9.17,
+   "lang": "ar"
+  },
+  {
+   "i": 21,
+   "word": "ودعم",
+   "start": 9.17,
+   "end": 9.8,
+   "lang": "ar"
+  },
+  {
+   "i": 22,
+   "word": "ومن",
+   "start": 9.8,
+   "end": 10.02,
+   "lang": "ar"
+  },
+  {
+   "i": 23,
+   "word": "وراك",
+   "start": 10.02,
+   "end": 10.4,
+   "lang": "ar"
+  },
+  {
+   "i": 24,
+   "word": "يحاول",
+   "start": 10.4,
+   "end": 10.87,
+   "lang": "ar"
+  },
+  {
+   "i": 25,
+   "word": "يخرب",
+   "start": 10.87,
+   "end": 11.09,
+   "lang": "ar"
+  },
+  {
+   "i": 26,
+   "word": "علاقاتك",
+   "start": 11.09,
+   "end": 11.78,
+   "lang": "ar"
+  },
+  {
+   "i": 27,
+   "word": "ويستغلون",
+   "start": 11.78,
+   "end": 12.55,
+   "lang": "ar"
+  },
+  {
+   "i": 28,
+   "word": "اي",
+   "start": 12.55,
+   "end": 12.83,
+   "lang": "ar"
+  },
+  {
+   "i": 29,
+   "word": "فرصة",
+   "start": 12.83,
+   "end": 13.25,
+   "lang": "ar"
+  },
+  {
+   "i": 30,
+   "word": "عشان",
+   "start": 13.85,
+   "end": 14.23,
+   "lang": "ar"
+  },
+  {
+   "i": 31,
+   "word": "يطيحون",
+   "start": 14.23,
+   "end": 14.58,
+   "lang": "ar"
+  },
+  {
+   "i": 32,
+   "word": "من",
+   "start": 14.58,
+   "end": 14.79,
+   "lang": "ar"
+  },
+  {
+   "i": 33,
+   "word": "قيمتك",
+   "start": 14.79,
+   "end": 15.1,
+   "lang": "ar"
+  },
+  {
+   "i": 34,
+   "word": "ويشوهون",
+   "start": 15.1,
+   "end": 15.83,
+   "lang": "ar"
+  },
+  {
+   "i": 35,
+   "word": "صورتك",
+   "start": 15.83,
+   "end": 16.33,
+   "lang": "ar"
+  },
+  {
+   "i": 36,
+   "word": "it",
+   "start": 17.19,
+   "end": 17.32,
+   "lang": "en"
+  },
+  {
+   "i": 37,
+   "word": "keeps",
+   "start": 17.32,
+   "end": 17.74,
+   "lang": "en"
+  },
+  {
+   "i": 38,
+   "word": "rolling",
+   "start": 17.74,
+   "end": 18.1,
+   "lang": "en"
+  },
+  {
+   "i": 39,
+   "word": "my",
+   "start": 18.1,
+   "end": 18.36,
+   "lang": "en"
+  },
+  {
+   "i": 40,
+   "word": "friend",
+   "start": 18.36,
+   "end": 18.67,
+   "lang": "en"
+  },
+  {
+   "i": 41,
+   "word": "just",
+   "start": 19.34,
+   "end": 19.63,
+   "lang": "en"
+  },
+  {
+   "i": 42,
+   "word": "be",
+   "start": 19.63,
+   "end": 19.79,
+   "lang": "en"
+  },
+  {
+   "i": 43,
+   "word": "careful",
+   "start": 19.79,
+   "end": 20.33,
+   "lang": "en"
+  }
+ ],
+ "note": "Times in seconds. start = word onset (cut/appear point). end = next word onset when speech is continuous."
+}
