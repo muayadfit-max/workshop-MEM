@@ -14,8 +14,8 @@ every 0.5 s (33 frames). We keep its grammar only, not its characters, poses or 
 | Cast | One cliff, one ladder, one clock, two figures | The same count. Nothing added |
 | Composition | Cliff wedge on the **left** (about 55% wide), ledge at about 31% of the height, a figure above, a climber on the right | **Mirrored and re-staged**: cliff on the **right**, ledge lower, rigid ladder standing **from below** |
 | Camera | One locked shot for all 16 s. No cuts, no zoom | Mostly locked. A slow push of 3–8% per shot, and **hard cuts only on word boundaries** |
-| Motion | Slow idle loops with a period of about 1.5–2 s and small amplitude: lean, reach, wind | The same tempo. Sine loops driven by the frame number, with an amplitude of 1–3° or 4–24 px |
-| Hold | The whole clip is one metaphor held | Shot 5 is a long hold (about 5 s) on the gap |
+| Motion | Slow idle loops with a period of about 1.5–2 s and small amplitude: lean, reach, wind | The same tempo. Sine loops that are pure functions of the frame number, with an amplitude of 1–3° or 4–24 px |
+| Hold | The whole clip is one metaphor held | Shot 7, the ending, is the long hold: the clock rolling, then the full scene |
 | Text | Burnt-in text exists (ignored) | Our own type layer (below) |
 
 **Original staging, not copied 1:1.** In the reference, the top figure cranks a clock
@@ -37,19 +37,19 @@ reference pose.
 | `accent` | `#1a9df1` | **Only** the clock and the word being spoken right now |
 
 No gradients, glows, shadows or blend modes. The accent never fills more than about 6%
-of the frame, except in Shot 6, the clock close-up.
+of the frame, except at the start of Shot 7, the clock close-up.
 
 ## 3. Type
 
 - **Tajawal**, loaded locally from `@fontsource/tajawal` (woff2 in `node_modules`, no CDN).
 - Arabic lines 1–6: `direction: rtl` **on the text element only**, `text-align: right`
   inside a centred block. English lines 7–8 are LTR.
-- Base word: 92 px, weight 500. **Emphasis word: 148 px, weight 800.** Line-height 1.15.
-- Max 4 words on screen at once. Lines 1–6 are one line each. If a line exceeds 952 px
-  it wraps to 2 lines, and never to 3.
+- Uses the CLAUDE.md type scale. Base word: **72 px** (subhead), weight 500. **Emphasis word: 140 px**
+  (headline maximum), weight 800. Line-height 1.15. One family only (Tajawal).
+- Max 4 words on screen at once. Each line is one line, and never wraps beyond 2.
 - **Text band:** y 200–420 px, centred, x 64–1016 px. The band stays in the same place
   in every shot, so the eye never hunts for the text.
-- The wordmark `MUAYAD FIT` (there is no `assets/logo.svg`) uses Tajawal 800, 120 px,
+- The wordmark `MUAYAD FIT` (there is no `assets/logo.svg`) uses Tajawal 800, 120 px (headline),
   tracking 0.08 em, in `#F4F4F4`. No mark is drawn.
 
 ## 4. How text enters and leaves
@@ -68,13 +68,21 @@ of the frame, except in Shot 6, the clock close-up.
 
 ## 5. Shot grammar
 
-- **Shot length** is 2.4–5 s. A single framing holds each idea. One long hold (Shot 5)
-  carries 2 lines.
+- **Shot length:** shots 1–6 run 2.3–2.9 s, so something meaningful changes every 2–3 s.
+  **The ending (Shot 7) is its own shot and holds the longest** (about 7.5 s). It is the
+  reference's long hold on one metaphor: the clock keeps rolling while the camera pulls back.
+- **Settle and hold:** a shot settles when its last word has entered (word start + 6 f) and
+  its camera or figure move has landed. **Every shot holds at least 1.5 s (45 f) after it
+  settles.** If the transcript breaks this, the cut moves to the next real word boundary.
 - **Camera** is one world SVG (the scene) inside a camera group. Each shot is a framing
   `{x, y, scale}` with a slow push of 3–8% across the shot (ease in-out). There is
   never a whip or a shake.
 - **Transitions** are hard cuts on real word boundaries. No dissolves between shots.
-  The only fades are the type exits and the end card.
+  The only fades are the type exits and the end card. Each shot is a `<Sequence from={...}>`
+  at an absolute start frame. Timing is written in seconds and converted once with
+  `Math.round(s * 30)`.
+- **Cut sound:** a soft tick starts 3 frames before each cut, about −20 dB under the
+  voice-over (the clock's own tick, synthesised in code). This is pending your OK.
 - **Idle life** (all frame-driven, with no `Math.random()`):
   - The top figure leans: ±1.2° over a 2.0 s sine.
   - The offered hand bobs: ±6 px over a 2.0 s sine, out of phase with the lean.
